@@ -144,7 +144,7 @@ newsteps_by_day = newdata_tbl%>%
 and plot a new histogram to show the new distribution of total steps per day and how it differs from the one we calculated with the missing values dataset:
 
 ```{r}
-par(mfrow=c(1,2))
+par(mfrow=c(1,2),cex.axis=0.7)
 hist(newsteps_by_day$total_steps,breaks=11,
      xlab = "Number of steps per day",
      main = "Total number of steps per day\nImputed values dataset",

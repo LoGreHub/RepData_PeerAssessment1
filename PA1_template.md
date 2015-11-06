@@ -191,8 +191,7 @@ We proceed merging original dataset with the average steps per interval we calcu
 
 ```r
 merged = left_join(data_tbl,steps_by_interval,
-                   by.x=interval,
-                   by.y=interval)
+                   by="interval")
 merged$steps[NAs]=merged$avg_steps[NAs]
 newdata_tbl = merged[,-4]
 ```
@@ -222,7 +221,7 @@ and plot a new histogram to show the new distribution of total steps per day and
 
 
 ```r
-par(mfrow=c(1,2))
+par(mfrow=c(1,2),cex.axis=0.7)
 hist(newsteps_by_day$total_steps,breaks=11,
      xlab = "Number of steps per day",
      main = "Total number of steps per day\nImputed values dataset",
@@ -312,4 +311,3 @@ xyplot(avg_steps~interval|daytype,data=newsteps_by_daytype_by_interval,
 
 ![](PA1_template_files/figure-html/unnamed-chunk-19-1.png) 
 
-#### *God bless relax in weekends!!!*
