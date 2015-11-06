@@ -311,3 +311,15 @@ xyplot(avg_steps~interval|daytype,data=newsteps_by_daytype_by_interval,
 
 ![](PA1_template_files/figure-html/unnamed-chunk-19-1.png) 
 
+Early morning activity (up to 9:30 roughly) is somehow reduced on average during weekends, and overall weekend activity is more uniformly distributed along the whole day: peaking 8:30 weekdays activity is smoothed down and late morning and afternoon activity is higher on average if compared to weekdays. 
+
+Seems reasonable to think about:  
+
+- some more sleeptime
+- work-free time to spend moving around 
+- lesser degree of stress due to "rush-hour" activity aroung 8:30
+
+during weekends based on data. 
+  
+  
+God bless weekends then!
