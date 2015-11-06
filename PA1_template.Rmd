@@ -122,8 +122,7 @@ We proceed merging original dataset with the average steps per interval we calcu
 
 ```{r, message=FALSE}
 merged = left_join(data_tbl,steps_by_interval,
-                   by.x=interval,
-                   by.y=interval)
+                   by="interval")
 merged$steps[NAs]=merged$avg_steps[NAs]
 newdata_tbl = merged[,-4]
 ```
@@ -206,4 +205,3 @@ xyplot(avg_steps~interval|daytype,data=newsteps_by_daytype_by_interval,
        ylab="Average number of steps")
 ```
 
-#### *God bless relax in weekends!!!*
